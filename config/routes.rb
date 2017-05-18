@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   mount Railswiki::Engine, at: "/wiki"
 
   get "/auth/google_login/callback" => "railswiki/sessions#create"
+  get "/auth/google_login" => "railswiki/sessions#create", as: :login
 end
