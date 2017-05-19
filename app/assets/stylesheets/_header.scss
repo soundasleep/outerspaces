@@ -1,0 +1,57 @@
+@import "variables";
+
+/* header, navigation */
+.wiki-Special_Header {
+  clear: both;
+  float: none;
+  width: 100%;
+  max-width: 100%;
+  padding-bottom: 1em * $whitespace;
+
+  h2 {
+    display: block;
+    margin: 0;
+    padding: 0.3em * $whitespace;
+    line-height: 100%;
+
+    a {
+      display: block;
+      margin: 0 auto;
+      width: 16em;
+      height: 2em;
+      text-align: center;
+      line-height: 2em;
+      font-size: 150%;
+      text-decoration: none;
+
+      // if replacing with an image
+      // text-indent: -900em;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  h3 {
+    display: none;
+  }
+
+  /* navigation */
+  ul {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    width: 80%;
+
+    li {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+
+      display: inline-block;
+      width: 19%;
+      max-width: 19%;
+    }
+  }
+}

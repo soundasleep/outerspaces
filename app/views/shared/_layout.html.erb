@@ -1,0 +1,19 @@
+<div class="header">
+  <%= include_wiki "Special:Header" %>
+</div>
+
+<div class="content">
+  <%= render partial: "shared/notices" %>
+
+  <%= yield %>
+</div>
+
+<div class="footer">
+  <%= include_wiki "Special:Footer" %>
+
+  <%= include_wiki "Special:Other Links" %>
+
+  <div class="menu">
+    <%= render "shared/menu" %>
+  </div>
+</div>

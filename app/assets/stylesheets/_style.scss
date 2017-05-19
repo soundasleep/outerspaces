@@ -1,1 +1,87 @@
-body { background: #fcf; }
+@import url('https://fonts.googleapis.com/css?family=Didact+Gothic:400,400i,700');
+
+@import "variables";
+@import "header";
+@import "content";
+@import "footer";
+
+html, body {
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 1.1em;
+  margin: 0;
+  padding: 0;
+  color: $text;
+  background: $footer;
+
+  .header {
+    background: $header;
+    color: $header-text;
+
+    a, a:hover, a:visited {
+      color: $header-link;
+    }
+  }
+
+  .content {
+    background: $background;
+    padding: (1em * $whitespace) (2em * $whitespace);
+  }
+
+  .footer {
+    background: $footer;
+    color: $footer-text;
+
+    a, a:hover, a:visited {
+      color: $footer-link;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    /* admin controls */
+    .menu {
+      float: none;
+      max-width: 100%;
+      padding: 1em;
+      margin: 0;
+
+      font-size: 70%;
+
+      a {
+        padding-right: 1em;
+      }
+    }
+  }
+}
+
+a, a:visited {
+  color: $link;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: $highlight;
+  }
+}
+
+.wiki-included {
+  &.wiki-Special_Search, &.wiki-Special_Header {
+    form, label {
+      display: inline-block;
+      border: 0;
+      padding: 0;
+      clear: none;
+    }
+    p {
+      display: inline;
+      margin: 0;
+    }
+    label, input[type=submit] {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,75 @@
+@import "variables";
+
+.content {
+  position: relative;
+
+  .actions {
+    float: right;
+    font-size: 80%;
+
+    a.history, a.edit {
+      display: inline-block;
+      margin-left: 1em;
+    }
+
+    a.json {
+      display: none;
+    }
+  }
+
+  .information {
+    // color: $unimportant;
+    // text-align: right;
+    // font-size: 80%;
+    display: none;
+  }
+
+  $home-image-width: 200px;
+  $home-image-padding: 20px;
+
+  h1 {
+    margin: 0 0 (0.3em * $whitespace) 0;
+    padding: 0;
+
+    &.wiki-Home {
+      display: none;
+    }
+  }
+
+  h2 {
+    border-top: 1px solid $unimportant;
+    margin-top: 1em;
+    padding-top: 1em;
+  }
+
+  .wiki-Home, .wiki-Our_Groups {
+    position: relative;
+
+    h3 {
+      border-top: 1px solid $unimportant;
+      margin: 0;
+      padding: 0;
+      padding-top: 1em;
+      font-size: 150%;
+      text-indent: $home-image-width + $home-image-padding;
+
+      img {
+        position: absolute;
+        left: 0;
+        width: $home-image-width;
+        max-width: initial;
+      }
+    }
+
+    h3:first-of-type {
+      border: 0;
+      padding-top: 0;
+    }
+
+    h3 ~ p {
+      margin-left: $home-image-width + $home-image-padding;
+      min-height: ($home-image-width - $home-image-padding) * 0.8;
+    }
+
+  }
+}
