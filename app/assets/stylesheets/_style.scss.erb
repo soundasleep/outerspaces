@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Didact+Gothic|Work+Sans:600');
+
+@import "variables";
+@import "header";
+@import "content";
+@import "footer";
+@import "tables";
+
+html, body, input[type=text] {
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 1.1em;
+
+  h2, h3, b, strong {
+    font-family: 'Work Sans', sans-serif;
+  }
+}
+
+html, body {
+  background: $footer;
+  color: $text;
+  margin: 0;
+  padding: 0;
+}
+
+input[type=text] {
+  margin: 0;
+  padding: 2px * $whitespace;
+  font-size: 80%;
+}
+
+.header {
+  background: $header;
+  background-image: url(<%= asset_path 'milky-way.jpg' %>);
+  background-size: 100%;
+  background-position: 50% 30%;
+  color: $header-text;
+  text-shadow: darken($header, 10%) 2px 2px 4px;
+  border-bottom: 1px solid darken($header, 10%);
+  padding: 0 (10px * $whitespace);
+
+  a, a:hover, a:visited {
+    color: $header-link;
+  }
+}
+
+.content {
+  background: $background;
+  padding: (1em * $whitespace) (2em * $whitespace);
+}
+
+.footer {
+  background: $footer;
+  color: $footer-text;
+  text-shadow: darken($footer, 10%) 1px 1px 3px;
+  border-top: 1px solid darken($footer, 10%);
+  padding: 0 (10px * $whitespace);
+
+  a, a:hover, a:visited {
+    color: $footer-link;
+  }
+
+  h3 {
+    a, a:hover, a:visited {
+      color: $footer-text;
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+
+  /* admin controls */
+  .menu {
+    float: none;
+    max-width: 100%;
+    padding: 1em;
+    margin: 0;
+
+    font-size: 70%;
+
+    a {
+      padding-right: 1em;
+    }
+  }
+}
+
+a, a:visited {
+  color: $link;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: $highlight;
+  }
+}
+
+.wiki-included {
+  &.wiki-Special_Search, &.wiki-Special_Header {
+    form, label {
+      display: inline-block;
+      border: 0;
+      padding: 0;
+      clear: none;
+    }
+    p {
+      display: inline;
+      margin: 0;
+    }
+    label, input[type=submit] {
+      display: none;
+    }
+  }
+}
+
+#notice {
+  color: green;
+}

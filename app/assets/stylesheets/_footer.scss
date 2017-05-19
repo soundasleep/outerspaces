@@ -5,8 +5,13 @@
   clear: both;
 
   margin: 0 auto;
-  max-width: 50em;
+  width: 100%;
+  max-width: ($horizontal * 0.95);
+  font-size: 90%;
 }
+
+$columns: 3;
+$column-width: (100% / $columns);
 
 .wiki-Special_Footer {
   height: 8em + (3em * $whitespace);
@@ -15,7 +20,7 @@
 
   h3 {
     margin: 0;
-    width: 30%;
+    width: $column-width;
 
     /* hack columns */
     position: absolute;
@@ -25,15 +30,15 @@
       left: 0;
     }
     &:nth-of-type(2) {
-      left: 30%;
+      left: 1 * $column-width;
     }
     &:nth-of-type(3) {
-      left: 60%;
+      left: 2 * $column-width;
     }
   }
 
   ul {
-    width: 30%;
+    width: $column-width;
 
     list-style: none;
     padding: 0;
@@ -47,10 +52,10 @@
       left: 0;
     }
     &:nth-of-type(2) {
-      left: 30%;
+      left: 1 * $column-width;
     }
     &:nth-of-type(3) {
-      left: 60%;
+      left: 2 * $column-width;
     }
 
     li {

@@ -5,7 +5,8 @@
   clear: both;
   float: none;
   width: 100%;
-  max-width: 100%;
+  max-width: ($horizontal * 1.1);
+  margin: 0 auto;
   padding-bottom: 1em * $whitespace;
 
   h2 {
@@ -42,7 +43,7 @@
     list-style: none;
     margin: 0 auto;
     padding: 0;
-    width: 80%;
+    width: 100%;
 
     li {
       margin: 0;
@@ -50,8 +51,14 @@
       text-align: center;
 
       display: inline-block;
+
+      /* 5 columns */
       width: 19%;
       max-width: 19%;
     }
+  }
+
+  input[type=text] {
+    width: 100%;
   }
 }

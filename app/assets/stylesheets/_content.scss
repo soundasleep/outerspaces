@@ -3,33 +3,43 @@
 .content {
   position: relative;
 
-  .actions {
-    float: right;
-    font-size: 80%;
+  .wiki-content, .meta-content {
+    position: relative;
+    max-width: $horizontal;
+    margin: 0 auto;
 
-    a.history, a.edit {
-      display: inline-block;
-      margin-left: 1em;
+    .actions {
+      position: absolute;
+      // float: right;
+      z-index: 100;
+      right: 0;
+      font-size: 80%;
+
+      a.history, a.edit {
+        display: inline-block;
+        margin-left: 1em;
+      }
+
+      a.json {
+        display: none;
+      }
     }
 
-    a.json {
+    .information {
+      // color: $unimportant;
+      // text-align: right;
+      // font-size: 80%;
       display: none;
     }
   }
 
-  .information {
-    // color: $unimportant;
-    // text-align: right;
-    // font-size: 80%;
-    display: none;
-  }
-
   $home-image-width: 200px;
-  $home-image-padding: 20px;
+  $home-image-padding: $home-image-width / 8;
 
   h1 {
     margin: 0 0 (0.3em * $whitespace) 0;
     padding: 0;
+    max-width: 80%;
 
     &.wiki-Home {
       display: none;
@@ -42,22 +52,41 @@
     padding-top: 1em;
   }
 
-  .wiki-Home, .wiki-Our_Groups {
+  .wiki-content {
+    table {
+      thead {
+        font-weight: bold;
+        text-align: left;
+      }
+    }
+  }
+
+  .wiki-Home, .wiki-Our_Groups, .wiki-Our_Supporters {
     position: relative;
+
+    h2 {
+      border: 0;
+      margin: 0 0 (0.5em * $whitespace) 0;
+      padding: 0;
+      text-align: center;
+    }
 
     h3 {
       border-top: 1px solid $unimportant;
       margin: 0;
+      margin-top: 0.5em * $whitespace;
       padding: 0;
-      padding-top: 1em;
+      padding-top: 0.5em * $whitespace;
       font-size: 150%;
       text-indent: $home-image-width + $home-image-padding;
+      width: 100%;
 
       img {
         position: absolute;
         left: 0;
         width: $home-image-width;
         max-width: initial;
+        margin-bottom: 3em;
       }
     }
 
@@ -68,8 +97,39 @@
 
     h3 ~ p {
       margin-left: $home-image-width + $home-image-padding;
-      min-height: ($home-image-width - $home-image-padding) * 0.8;
     }
+  }
 
+  .wiki-Our_Supporters {
+    h3 {
+      height: 75px;
+      display: inline-block;
+
+      img {
+        max-height: 75px;
+        width: auto;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .wiki-Home {
+    padding-bottom: (1em * $whitespace);
+
+    h3 {
+      font-size: 110%;
+    }
+  }
+
+  .wiki-Naming_New_Zealand,
+  .wiki-School_s_Out,
+  .wiki-Tranzform,
+  .wiki-Wellington_Binder_Exchange {
+    img:first-of-type {
+      float: right;
+      margin: 0 0 1em 1em;
+      max-width: 250px;
+      max-height: 200px;
+    }
   }
 }

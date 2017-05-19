@@ -2,15 +2,16 @@ $link: #6A3583;
 $highlight: #B8445B;
 $highlight2: #3F4389;
 
-$header: lighten($highlight2, 30%);
+$header: black;
 $background: white;
 $footer: $highlight;
 $text: #222;
 $unimportant: lighten($text, 50%);
 
-$header-text: $background;
-$header-link: darken($header, 50%);
+$header-text: #999;
+$header-link: lighten($highlight2, 40%);
 $footer-text: lighten($footer, 20%);
 $footer-link: lighten($footer, 40%);
 
 $whitespace: 2.0;
+$horizontal: 50em;

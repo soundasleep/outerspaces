@@ -1,0 +1,62 @@
+@import "variables";
+
+table.list-table {
+  width: 100%;
+  border-collapse: collapse;
+
+  thead {
+    background: $highlight;
+    color: $background;
+
+    th {
+      text-align: left;
+    }
+  }
+
+  tbody {
+
+  }
+
+  tfoot {
+
+  }
+
+  th, td {
+    margin: 0;
+    padding: 2px * $whitespace;
+    border: thin solid #ddd;
+  }
+
+  tr:nth-child(even) {
+    background: #eee;
+  }
+
+  td.tools, td.json {
+    display: none;
+  }
+}
+
+
+.wiki-content {
+  table {
+    border-collapse: collapse;
+
+    thead {
+      background: #ddd;
+
+      th {
+        text-align: center;
+      }
+    }
+
+    th, td {
+      margin: 0;
+      padding: 2px * $whitespace;
+      border: thin solid #ddd;
+    }
+
+    tr:nth-child(even) {
+      background: #eee;
+    }
+  }
+}
