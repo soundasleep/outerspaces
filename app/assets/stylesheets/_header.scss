@@ -7,7 +7,7 @@
   width: 100%;
   max-width: ($horizontal * 1.1);
   margin: 0 auto;
-  padding-bottom: 1em * $whitespace;
+  padding-bottom: 0.5em * $whitespace;
 
   h2 {
     display: block;
@@ -19,7 +19,7 @@
       display: block;
       margin: 0 auto;
       width: 16em;
-      height: 2em;
+      height: 1.2em;
       text-align: center;
       line-height: 2em;
       font-size: 150%;
@@ -35,6 +35,20 @@
   }
 
   h3 {
+    display: block;
+    margin: 0;
+    padding: 0.3em * $whitespace;
+    line-height: 100%;
+    text-align: center;
+
+    a {
+      display: block;
+      height: 2em;
+      line-height: 1em;
+    }
+  }
+
+  h4 {
     display: none;
   }
 
@@ -52,9 +66,9 @@
 
       display: inline-block;
 
-      /* 5 columns */
-      width: 19%;
-      max-width: 19%;
+      /* 6 columns */
+      width: 16%;
+      max-width: 16%;
     }
   }
 

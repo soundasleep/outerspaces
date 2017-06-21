@@ -4,4 +4,6 @@ Rails.application.routes.draw do
 
   get "/auth/google_login/callback" => "railswiki/sessions#create"
   get "/auth/google_login" => "railswiki/sessions#create", as: :login
+
+  root to: "railswiki/pages#show", id: "Home"
 end
