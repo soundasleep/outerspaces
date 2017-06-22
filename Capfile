@@ -55,19 +55,21 @@ before 'deploy:migrate', :copy_engine_migrations do
   end
 end
 
-after 'deploy:symlink:shared', :allow_logs_to_be_writable_by_root do
+after 'deploy:cleanup', :allow_logs_to_be_writable_by_root do
   on roles(:app) do
-    within release_path do
-      execute :chmod, "a+rw -R #{current_path}/log"
-    end
+    execute :chmod, "a+rw -R #{release_path}/log"
   end
 end
 
-after 'deploy:symlink:shared', :allow_tmp_to_be_writable_by_all do
+after 'deploy:cleanup', :allow_tmp_to_be_writable_by_all do
   on roles(:app) do
-    within release_path do
-      execute :chmod, "a+rw -R #{current_path}/tmp"
-    end
+    execute :chmod, "a+rw -R #{release_path}/tmp"
+  end
+end
+
+after 'deploy:cleanup', :allow_uploads_to_be_writable_by_all do
+  on roles(:app) do
+    execute :chmod, "a+rw -R #{shared_path}/public/uploads"
   end
 end
 
