@@ -1,24 +1,18 @@
-# README
+outerspaces
+===========
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the source code for http://outerspaces.org.nz, using the [Railswiki engine](https://github.com/soundasleep/railswiki/).
 
-Things you may want to cover:
+# Deploying
 
-* Ruby version
+Follow the instructions for [deploying a Railswiki site](https://github.com/soundasleep/railswiki/blob/master/DEPLOY.md).
 
-* System dependencies
+# TODO
 
-* Configuration
+1. Responsive design
+1. Accessible content (screen readers etc)
 
-* Database creation
+## License
 
-* Database initialization
+This project is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
