@@ -69,7 +69,7 @@ end
 
 after 'deploy:cleanup', :allow_uploads_to_be_writable_by_all do
   on roles(:app) do
-    execute :chmod, "a+rw -R #{shared_path}/public/uploads"
+    execute :chmod, "a+rwX #{shared_path}/public/uploads"
   end
 end
 
