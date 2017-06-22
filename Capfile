@@ -46,5 +46,22 @@ set :rbenv_ruby, '2.2.3'
 require 'dotenv'
 Dotenv.load
 
+# Copy over railswiki migrations as part of migration
+before 'deploy:migrate', :copy_engine_migrations do
+  on roles(:app) do
+    within current_path do
+      execute :rake, 'railties:install:migrations'
+    end
+  end
+end
+
+after 'deploy:symlink:shared', :allow_logs_to_be_writable_by_root do
+  on roles(:app) do
+    within release_path do
+      execute :chmod, "a+rw -R #{current_path}/log"
+    end
+  end
+end
+
 # Load custom tasks from `lib/capistrano/tasks` if you have any defined
 Dir.glob("lib/capistrano/tasks/*.rake").each { |r| import r }
