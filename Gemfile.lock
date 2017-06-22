@@ -106,7 +106,7 @@ GEM
     globalid (0.4.0)
       activesupport (>= 4.2.0)
     hashie (3.5.5)
-    i18n (0.8.1)
+    i18n (0.8.4)
     jbuilder (2.6.4)
       activesupport (>= 3.0.0)
       multi_json (>= 1.2)
@@ -233,10 +233,10 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
-  capistrano (~> 3.7, >= 3.7.1)
-  capistrano-passenger (~> 0.2.0)
-  capistrano-rails (~> 1.2)
-  capistrano-rbenv (~> 2.1)
+  capistrano
+  capistrano-passenger
+  capistrano-rails
+  capistrano-rbenv
   coffee-rails (~> 4.2)
   dotenv-rails
   figaro

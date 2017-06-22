@@ -21,7 +21,8 @@ set :deploy_to, "/home/deploy/outerspaces"
 # set :pty, true
 
 # Default value for :linked_files is []
-# append :linked_files, "config/database.yml", "config/secrets.yml"
+# These files are copied from /shared/config/database.yml to the deployed app
+append :linked_files, "config/database.yml", "config/secrets.yml", ".env"
 
 # Default value for linked_dirs is []
 append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bundle", "public/system", "public/uploads"
@@ -34,3 +35,5 @@ append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bund
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5
+
+set :passenger_restart_with_touch, true
