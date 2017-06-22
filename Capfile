@@ -63,5 +63,13 @@ after 'deploy:symlink:shared', :allow_logs_to_be_writable_by_root do
   end
 end
 
+after 'deploy:symlink:shared', :allow_tmp_to_be_writable_by_all do
+  on roles(:app) do
+    within release_path do
+      execute :chmod, "a+rw -R #{current_path}/tmp"
+    end
+  end
+end
+
 # Load custom tasks from `lib/capistrano/tasks` if you have any defined
 Dir.glob("lib/capistrano/tasks/*.rake").each { |r| import r }
