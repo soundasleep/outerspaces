@@ -35,6 +35,7 @@
 
   $home-image-width: 200px;
   $home-image-padding: $home-image-width / 8;
+  $home-center-padding: 100px;
 
   h1 {
     margin: 0 0 (0.3em * $whitespace) 0;
@@ -76,31 +77,36 @@
     }
 
     h3 {
-      border-top: 1px solid $unimportant;
       margin: 0;
       margin-top: 0.5em * $whitespace;
       padding: 0;
-      padding-top: 0.5em * $whitespace;
       font-size: 150%;
-      text-indent: $home-image-width + $home-image-padding;
+      text-indent: $home-image-width + $home-image-padding + $home-center-padding;
       width: 100%;
 
       img {
         position: absolute;
-        left: 0;
+        left: $home-center-padding;
         width: $home-image-width;
         max-width: initial;
         margin-bottom: 3em;
       }
     }
 
+    hr {
+      width: 85%;
+      height: 1px;
+      border: 0;
+      background: $unimportant;
+    }
+
     h3:first-of-type {
       border: 0;
-      padding-top: 0;
     }
 
     h3 ~ p {
-      margin-left: $home-image-width + $home-image-padding;
+      margin-left: $home-image-width + $home-image-padding + $home-center-padding;
+      margin-right: $home-center-padding;
     }
   }
 
