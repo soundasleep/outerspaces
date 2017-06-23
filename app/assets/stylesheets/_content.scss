@@ -42,7 +42,7 @@
 
     @media (max-width: $tablet) {
       font-size: 160%;
-      margin-top: 0.3em;
+      margin-top: (0.3em * $whitespace);
     }
 
     &.wiki-Home {

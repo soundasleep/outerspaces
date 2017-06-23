@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/soundasleep/railswiki.git
-  revision: 7811676dc8b84a67af55f60cf93acc1518b979d1
+  revision: 43b38bb8ee821fb45de75cd5e9713fc31b35d96a
   specs:
     railswiki (0.1.0)
       activerecord-session_store

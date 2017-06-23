@@ -1,7 +1,7 @@
 @import "variables";
 
 /* header, navigation */
-.wiki-Special_Header {
+.wiki-Special_Header, .wiki-Special_Navigation {
   clear: both;
   float: none;
   width: 100%;
@@ -45,21 +45,17 @@
     line-height: 100%;
     text-align: center;
 
-    a {
-      display: block;
-      height: 2em;
-      line-height: 1em;
-    }
-
     @media (max-width: $tablet) {
-      padding: 0;
+      padding: 0 0 0.3em * $whitespace;
     }
   }
 
   h4 {
     display: none;
   }
+}
 
+.wiki-Special_Navigation {
   /* navigation */
   ul {
     list-style: none;
@@ -86,5 +82,23 @@
 
   input[type=text] {
     width: 100%;
+  }
+}
+
+.wiki-included {
+  &.wiki-Special_Search, &.wiki-Special_Header, &.wiki-Special_Navigation {
+    form, label {
+      display: inline-block;
+      border: 0;
+      padding: 0;
+      clear: none;
+    }
+    p {
+      display: inline;
+      margin: 0;
+    }
+    label, input[type=submit] {
+      display: none;
+    }
   }
 }
