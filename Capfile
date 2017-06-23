@@ -63,13 +63,13 @@ end
 
 after 'deploy:cleanup', :allow_tmp_to_be_writable_by_all do
   on roles(:app) do
-    execute :chmod, "a+rw -R #{release_path}/tmp"
+    execute :chmod, "a+rw #{release_path}/tmp #{release_path}/tmp/uploads"
   end
 end
 
 after 'deploy:cleanup', :allow_uploads_to_be_writable_by_all do
   on roles(:app) do
-    execute :chmod, "a+rwX #{shared_path}/public/uploads"
+    execute :chmod, "a+rw #{shared_path}/public/uploads"
   end
 end
 

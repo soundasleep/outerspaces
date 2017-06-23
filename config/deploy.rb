@@ -25,7 +25,7 @@ set :deploy_to, "/home/deploy/outerspaces"
 append :linked_files, "config/database.yml", "config/secrets.yml", ".env"
 
 # Default value for linked_dirs is []
-append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bundle", "public/system", "public/uploads"
+append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "tmp/uploads", "vendor/bundle", "public/system", "public/uploads"
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
