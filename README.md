@@ -11,6 +11,8 @@ Follow the instructions for [deploying a Railswiki site](https://github.com/soun
 
 1. Responsive design
 1. Accessible content (screen readers etc)
+1. Performance optimisations
+1. Google Analytics
 
 ## License
 
