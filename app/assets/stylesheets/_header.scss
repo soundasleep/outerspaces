@@ -9,27 +9,31 @@
   margin: 0 auto;
   padding-bottom: 0.5em * $whitespace;
 
+  @media (max-width: $tablet) {
+    padding-bottom: 0;
+  }
+
   h2 {
     display: block;
+    line-height: 100%;
+    text-align: center;
     margin: 0;
     padding: 0.3em * $whitespace;
-    line-height: 100%;
+    padding-top: 0.7em * $whitespace;
 
     a {
-      display: block;
-      margin: 0 auto;
-      width: 16em;
-      height: 1.2em;
-      text-align: center;
-      line-height: 2em;
       font-size: 150%;
-      text-decoration: none;
+    }
 
-      // if replacing with an image
-      // text-indent: -900em;
+    em {
+      font-style: normal;
+    }
 
-      &:hover {
-        text-decoration: underline;
+    @media (max-width: $tablet) {
+      padding-top: 0.5em * $whitespace;
+
+      em {
+        display: none;
       }
     }
   }
@@ -46,6 +50,10 @@
       height: 2em;
       line-height: 1em;
     }
+
+    @media (max-width: $tablet) {
+      padding: 0;
+    }
   }
 
   h4 {
@@ -58,6 +66,10 @@
     margin: 0 auto;
     padding: 0;
     width: 100%;
+
+    @media (max-width: $tablet) {
+      display: none;
+    }
 
     li {
       margin: 0;

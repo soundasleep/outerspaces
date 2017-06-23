@@ -18,6 +18,10 @@ $column-width: (100% / $columns);
   padding: 0;
   position: relative;
 
+  @media (max-width: $tablet) {
+    height: auto;
+  }
+
   h3 {
     margin: 0;
     width: $column-width;
@@ -31,9 +35,24 @@ $column-width: (100% / $columns);
     }
     &:nth-of-type(2) {
       left: 1 * $column-width;
+      @media (max-width: $tablet) {
+        left: 0;
+      }
     }
     &:nth-of-type(3) {
       left: 2 * $column-width;
+      @media (max-width: $tablet) {
+        left: 0;
+      }
+    }
+
+    @media (max-width: $tablet) {
+      width: 100%;
+      margin-top: 1.5em;
+      margin-bottom: 0.5em;
+      position: relative;
+      top: auto;
+      left: auto;
     }
   }
 
@@ -53,13 +72,26 @@ $column-width: (100% / $columns);
     }
     &:nth-of-type(2) {
       left: 1 * $column-width;
+      @media (max-width: $tablet) {
+        left: 0;
+      }
     }
     &:nth-of-type(3) {
       left: 2 * $column-width;
+      @media (max-width: $tablet) {
+        left: 0;
+      }
     }
 
     li {
       line-height: 100% + (50% * $whitespace);
+    }
+
+    @media (max-width: $tablet) {
+      width: 100%;
+      position: relative;
+      top: auto;
+      left: auto;
     }
   }
 
@@ -69,6 +101,10 @@ $column-width: (100% / $columns);
 }
 
 .wiki-Special_Other_Links {
+  @media (max-width: $tablet) {
+    margin-top: 2em;
+  }
+
   ul, p {
     font-size: 80%;
   }

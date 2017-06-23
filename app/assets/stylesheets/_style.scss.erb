@@ -46,6 +46,10 @@ input[type=text] {
 .content {
   background: $background;
   padding: (1em * $whitespace) (2em * $whitespace);
+
+  @media (max-width: $tablet) {
+    padding: (0.1em * $whitespace) (0.6em * $whitespace);
+  }
 }
 
 .footer {

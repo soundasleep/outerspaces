@@ -26,9 +26,6 @@
     }
 
     .information {
-      // color: $unimportant;
-      // text-align: right;
-      // font-size: 80%;
       display: none;
     }
   }
@@ -41,6 +38,12 @@
     margin: 0 0 (0.3em * $whitespace) 0;
     padding: 0;
     max-width: 80%;
+    font-size: 200%;
+
+    @media (max-width: $tablet) {
+      font-size: 160%;
+      margin-top: 0.3em;
+    }
 
     &.wiki-Home {
       display: none;
@@ -82,14 +85,31 @@
       padding: 0;
       font-size: 150%;
       text-indent: $home-image-width + $home-image-padding + $home-center-padding;
+      @media (max-width: $wide) {
+        text-indent: $home-image-width + $home-image-padding;
+      }
       width: 100%;
 
       img {
         position: absolute;
         left: $home-center-padding;
+        @media (max-width: $wide) {
+          left: 0;
+        }
         width: $home-image-width;
         max-width: initial;
         margin-bottom: 3em;
+      }
+
+      @media (max-width: $tablet) {
+        text-indent: 0;
+
+        img {
+          position: relative;
+          display: block;
+          margin: 1em auto;
+          left: auto;
+        }
       }
     }
 
@@ -107,6 +127,16 @@
     h3 ~ p {
       margin-left: $home-image-width + $home-image-padding + $home-center-padding;
       margin-right: $home-center-padding;
+
+      @media (max-width: $wide) {
+        margin-left: $home-image-width + $home-image-padding;
+        margin-right: 0;
+      }
+
+      @media (max-width: $tablet) {
+        margin-left: 0;
+        margin-right: 0;
+      }
     }
   }
 
@@ -116,6 +146,10 @@
       width: 32%;
       vertical-align: bottom;
       text-align: center;
+
+      @media (max-width: $tablet) {
+        width: 100%;
+      }
 
       img {
         margin: 0 auto 1em auto;
@@ -148,6 +182,27 @@
       margin: 0 0 1em 1em;
       max-width: 250px;
       max-height: 200px;
+
+      @media (max-width: $tablet) {
+        float: none;
+        margin: 0 auto;
+      }
+    }
+
+    @media (max-width: $tablet) {
+      h3 {
+        display: block;
+        width: 100%;
+
+        img {
+          display: inline-block;
+          margin: 0 auto;
+        }
+      }
+
+      h4 {
+        text-align: center;
+      }
     }
   }
 }
