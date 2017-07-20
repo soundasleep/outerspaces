@@ -22,7 +22,7 @@ gem 'coffee-rails', '~> 4.2'
 # gem 'therubyracer', platforms: :ruby
 
 gem 'railswiki', github: 'soundasleep/railswiki'
-# , path: '../railswiki' # TODO switch to github
+#gem 'railswiki', path: '../railswiki'
 
 # for loading secrets
 gem 'figaro'
