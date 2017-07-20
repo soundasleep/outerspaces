@@ -1,0 +1,29 @@
+{
+  "name": "outerspaces-scratch",
+  "version": "0.1.0",
+  "description": "Source code for outerspaces.org.nz",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soundasleep/outerspaces.git"
+  },
+  "author": "Jevon Wright <jevon@jevon.org>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/soundasleep/outerspaces/issues"
+  },
+  "homepage": "https://github.com/soundasleep/outerspaces#readme",
+  "dependencies": {
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "load-grunt-plugins-from-parent": "0.0.3",
+    "railswiki": "file:../railswiki"
+  }
+}
