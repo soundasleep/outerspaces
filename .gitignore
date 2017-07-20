@@ -23,3 +23,5 @@
 # Private config
 .env
 public/uploads/
+/public/packs
+/node_modules
