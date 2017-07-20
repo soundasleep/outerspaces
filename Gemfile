@@ -45,6 +45,7 @@ group :development do
   gem 'capistrano-rails'
   gem 'capistrano-passenger'
   gem 'capistrano-rbenv'
+  gem 'capistrano-yarn'
 end
 
 group :development, :test do

@@ -37,6 +37,7 @@ install_plugin Capistrano::SCM::Git
 require 'capistrano/rails'
 require 'capistrano/passenger'
 require 'capistrano/bundler'
+require 'capistrano/yarn'
 
 # If you are using rbenv add these lines:
 require 'capistrano/rbenv'
