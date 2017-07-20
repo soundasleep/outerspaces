@@ -21,8 +21,8 @@ gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
-#gem 'railswiki', github: 'soundasleep/railswiki'
-gem 'railswiki', path: '../railswiki'
+gem 'railswiki', github: 'soundasleep/railswiki'
+#gem 'railswiki', path: '../railswiki'
 
 # for loading secrets
 gem 'figaro'

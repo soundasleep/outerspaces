@@ -26,7 +26,6 @@
     "style-loader": "^0.18.2",
     "webpack": "^3.3.0",
     "webpack-manifest-plugin": "^1.1.2",
-    "railswiki": "file:../railswiki",
     "webpack-merge": "^4.1.0"
   },
   "devDependencies": {

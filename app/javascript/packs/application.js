@@ -20,6 +20,4 @@ window.tingle = Tingle
 // is missing some extra styles that aren't being included properly. who knows.
 // import "simplemde/src/css/simplemde.css"
 import "simplemde/debug/simplemde.css"
-
 import 'tingle.js/src/tingle.css'
-
