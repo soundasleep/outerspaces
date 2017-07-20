@@ -47,15 +47,6 @@ set :rbenv_ruby, '2.2.3'
 require 'dotenv'
 Dotenv.load
 
-# Copy over railswiki migrations as part of migration
-before 'deploy:migrate', :copy_engine_migrations do
-  on roles(:app) do
-    within current_path do
-      execute :rake, 'railties:install:migrations'
-    end
-  end
-end
-
 after 'deploy:cleanup', :allow_logs_to_be_writable_by_root do
   on roles(:app) do
     execute :chmod, "a+rw -R #{release_path}/log"
