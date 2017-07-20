@@ -3744,8 +3744,9 @@ rails-erb-loader@^5.0.2:
     loader-utils "^1.1.0"
     lodash.defaults "^4.2.0"
 
-"railswiki@file:../railswiki":
+"railswiki@https://github.com/soundasleep/railswiki":
   version "0.1.0"
+  resolved "https://github.com/soundasleep/railswiki#74533ed6f63e273e616e5a4712f5654ffbc53d03"
   dependencies:
     simplemde "^1.11.2"
     tingle.js "^0.11.0"
