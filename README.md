@@ -9,7 +9,6 @@ Follow the instructions for [deploying a Railswiki site](https://github.com/soun
 
 # TODO
 
-1. Cannot create a page titled kōrero (need to fix migrations with capistrano)
 1. Accessible content (screen readers etc)
 1. Performance optimisations
 

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Didact+Gothic|Work+Sans:600');
+@import url('https://fonts.googleapis.com/css?family=Hind:300,600');
 
 @import "variables";
 @import "header";
@@ -7,11 +7,11 @@
 @import "tables";
 
 html, body, input[type=text] {
-  font-family: 'Didact Gothic', sans-serif;
+  font-family: 'Hind', sans-serif;
   font-size: 1.1em;
 
   h2, h3, b, strong {
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Hind', sans-serif;
   }
 }
 
@@ -50,6 +50,10 @@ input[type=text] {
   @media (max-width: $tablet) {
     padding: (0.1em * $whitespace) (0.6em * $whitespace);
   }
+
+  @media (max-width: $mobile) {
+    padding: (0.1em * $whitespace) (0.3em * $whitespace);
+  }
 }
 
 .footer {
@@ -58,6 +62,7 @@ input[type=text] {
   text-shadow: darken($footer, 10%) 1px 1px 3px;
   border-top: 1px solid darken($footer, 10%);
   padding: 0 (10px * $whitespace);
+  font-size: 95%;
 
   a, a:hover, a:visited {
     color: $footer-link;
