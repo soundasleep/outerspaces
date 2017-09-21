@@ -5,7 +5,11 @@ This is the source code for http://outerspaces.org.nz, using the [Railswiki engi
 
 # Deploying
 
-Follow the instructions for [deploying a Railswiki site](https://github.com/soundasleep/railswiki/blob/master/DEPLOY.md).
+Follow the instructions for [deploying a Railswiki site](https://github.com/soundasleep/railswiki/blob/master/DEPLOY.md):
+
+```bash
+$ cap production deploy
+```
 
 # TODO
 

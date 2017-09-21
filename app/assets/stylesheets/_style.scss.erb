@@ -38,6 +38,30 @@ input[type=text] {
   border-bottom: 1px solid darken($header, 10%);
   padding: 0 (10px * $whitespace);
 
+  h2 {
+    padding: 0;
+
+    a {
+      background: url(<%= asset_path 'letterheadrainbow-white-01.svg' %>) no-repeat;
+      background-size: 100%;
+      background-position: 50% 90%;
+      display: block;
+      width: 500px;
+      height: 120px;
+      @media (max-width: $mobile) {
+        width: 250px;
+        height: 60px;
+      }
+      margin: 0 auto;
+      text-indent: -900em;
+      overflow: hidden;
+    }
+  }
+
+  h3 {
+    display: none;
+  }
+
   a, a:hover, a:visited {
     color: $header-link;
   }
