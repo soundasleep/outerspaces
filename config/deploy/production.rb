@@ -60,6 +60,6 @@
 #     # password: "please use keys"
 #   }
 
-raise "You need to specify an IP to deploy to in .env" unless ENV["DEPLOY_IP"]
+raise "You need to specify a DEPLOY_IP to deploy to in .env" unless ENV["DEPLOY_IP"]
 server "#{ENV["DEPLOY_IP"]}", user: 'deploy', roles: %w{app db web}, port: "#{ENV["DEPLOY_PORT"] || 22}".to_i
 
